@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cartoon Fish
+* source:	https://sketchfab.com/3d-models/cartoon-fish-08cc55fc36994e04ad24bf36b9aef6e5
+* author:	Dwaalinkt (https://sketchfab.com/Dwaalinkt)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cartoon Fish" (https://sketchfab.com/3d-models/cartoon-fish-08cc55fc36994e04ad24bf36b9aef6e5) by Dwaalinkt (https://sketchfab.com/Dwaalinkt) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

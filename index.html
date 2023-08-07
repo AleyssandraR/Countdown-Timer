@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/zcanter/aframe-gradient-sky/master/dist/gradientsky.min.js"></script>
+
+    <!-- COMPONENT FILES-->
+    <script src="./js/Fish.js"></script>
+    <script src="./js/Treasure.js"></script>
+    <script src="./js/Rotation.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!---Assets-->
+      <a-a-assets>
+
+       
+        <a-asset-item
+          id="dive1"
+          src="assets/diver/scene.gltf"
+        ></a-asset-item>
+      </a-a-assets>
+
+      <!-- Sky -->
+      <a-sky
+        geometry="primitive: sphere;"
+        material="shader: gradient; bottomColor: #00009e; topColor:109 205 227;offset: 0.0001;"
+        radius="100"
+        theta-length="180"
+        side="double"
+        animation="property: rotation; to: 0 300 0; easing:linear; loop: true; dur: 500000"
+      >
+        <!------------------------------------GLTF Models------------------------------------------>
+
+        <!--Fish Entity-->
+        <a-entity position="0 0 0" id="fish" fish> </a-entity>
+
+        <!--Treasure Entity-->
+        <a-entity position="0 0 0" id="coins" coins> </a-entity>
+
+      <!--Scuba Driver-->
+      <a-entity position="5 5 5" id="diver" diver-rotation-reader rotation="0 90 -20" scale="20 20 20" gltf-model="#dive1" dynamic-body="mass:0" game-play> </a-entity>
+
+      <!-- CAMERA -->
+      <a-entity
+        camera="active: true"
+        look-controls
+        position="0 10 25"
+      ></a-entity>
+
+      <a-entity
+        position="5 -5 5" 
+        text="font:aileronsemibold;width:14;color:white;value:TIME\REMAINING"></a-entity>
+        
+      <a-entity position="0 0 0">
+        
+      <a-entity
+      id='timer'
+      position='-9.8 0.3 0'
+      text='font:exo2bold;align:center;width:30;color:white;value:00:00'
+      ></a-entity>
+      <a-entity
+      id="game_over_text"
+      position="0 7.5 0"
+      text="font:exo2bold; align:center; width:100; color:white; value:Game Over"
+      visible="false"
+      ></a-entity>
+
+      <a-entity position="-23.5 19.3 0">
+        <a-entity
+          position="-1.5 0.07 0"
+          text="font: aileronsemibold; width: 12; color: white; value: TIME\nREMAINING"
+        ></a-entity>
+        <a-entity
+          id="timer"
+          position="-9.8 0.3 0"
+          text="font: exo2bold; align: center; width: 30; color: white; value: 00:00"
+        ></a-entity>
+      </a-entity>
+
+      </a-entity>
+
+    </a-scene>
+  </body>
+</html>
